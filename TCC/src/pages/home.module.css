@@ -1,0 +1,102 @@
+/* Seção 1: Hero */
+.heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* 100vh - altura do header (aprox 65px) */
+  min-height: calc(100vh - 65px); 
+  background-color: var(--color-surface);
+  padding: 2rem;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  max-width: 800px;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 1.5rem auto 2.5rem;
+}
+
+.heroButton {
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: var(--color-brand-primary);
+  color: var(--color-brand-text);
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.heroButton:hover {
+  background-color: var(--color-brand-hover);
+}
+
+/* Seção 2: Plataformas */
+.platformsSection {
+  padding: 4rem 2.5rem;
+  background-color: var(--color-background);
+  text-align: center;
+}
+
+.platformsTitle {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.platformsGrid {
+  display: grid;
+  /* Cria 3 colunas, mas nenhuma menor que 300px */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.platformCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.platformCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cardText {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  flex-grow: 1; /* Empurra o botão para baixo */
+  margin-bottom: 2rem;
+}
+
+.cardButton {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-brand-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cardButton:hover {
+  color: var(--color-brand-hover);
+}

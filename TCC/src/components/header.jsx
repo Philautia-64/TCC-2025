@@ -1,24 +1,44 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import enterIcon from '../assets/enterKey.svg';
-import './Header.css';
+// CORREÇÃO: Importamos os estilos para um objeto 'styles'
+import styles from './Header.module.css';
 
 function Header() {
   return (
-    <header className="app-header">
-      <div className="header-title">
-        <div className="title-line-one">
-          <span>Enter</span>
-          <img src={enterIcon} alt="Enter key icon" className="enter-icon" />
-        </div>
-        <span>Development</span>
+    // Usamos a classe 'appHeader' de dentro do objeto 'styles'
+    <header className={styles.appHeader}>
+      <div className={styles.logoContainer}>
+        {/* O logo agora é um link de texto, limpo e moderno */}
+        <Link to="/" className={styles.logo}>
+          Enter <span>Development</span>
+        </Link>
       </div>
 
-      <nav className="app-nav">
-        <NavLink to="/" className="nav-link">Home</NavLink>
-        <NavLink to="/roblox" className="nav-link">Roblox</NavLink>
-        <NavLink to="/godot" className="nav-link">Godot</NavLink>
-        <NavLink to="/unity" className="nav-link">Unity</NavLink>
+      <nav className={styles.appNav}>
+        <NavLink 
+          to="/" 
+          className={({ isActive }) => isActive ? `${styles.navLink} ${styles.active}` : styles.navLink}
+        >
+          Home
+        </NavLink>
+        <NavLink 
+          to="/roblox" 
+          className={({ isActive }) => isActive ? `${styles.navLink} ${styles.active}` : styles.navLink}
+        >
+          Roblox
+        </NavLink>
+        <NavLink 
+          to="/godot" 
+          className={({ isActive }) => isActive ? `${styles.navLink} ${styles.active}` : styles.navLink}
+        >
+          Godot
+        </NavLink>
+        <NavLink 
+          to="/unity" 
+          className={({ isActive }) => isActive ? `${styles.navLink} ${styles.active}` : styles.navLink}
+        >
+          Unity
+        </NavLink>
       </nav>
     </header>
   );
