@@ -5,7 +5,7 @@ import styles from './Header.module.css';
 
 function Header() {
   return (
-    // Usamos a classe 'appHeader' de dentro do objeto 'styles'
+
     <header className={styles.appHeader}>
       <div className={styles.logoContainer}>
         {/* O logo agora é um link de texto, limpo e moderno */}
